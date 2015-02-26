@@ -11,13 +11,14 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
-" Bundle 'davidmfoley/tslime.vim'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'jnwhiteh/vim-golang'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'altercation/vim-colors-solarized'
 
 set ruler
-syntax on
+syntax on 
+set background=dark
+colorscheme solarized
 set encoding=utf-8
 
 set bs=2
@@ -26,7 +27,6 @@ set guioptions-=L
 set guioptions-=r
 
 set showmatch
-" set nu
 set whichwrap=<,>,h,l,[,]
 
 set wrapmargin=0
@@ -55,7 +55,7 @@ let g:CommandTMaxHeight=20
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_always_populate_loc_list=1
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
@@ -107,7 +107,6 @@ function! FormatDocument()
   exec 'ggVG='
 endfunction
 
-source ~/.vim/ruby_helpers.vim
 source ~/.vim/coffee_helpers.vim
 
 " flip between test/subject (same window, vsp, sp)
@@ -135,7 +134,6 @@ map <leader>gX :ClearCtrlPCache<cr>
 map <leader>gb :CtrlPBuffer<cr>
 map <leader>gu :CtrlPMRU<cr>
 " Command-T 'go to' (inspired by GRB)
-map <leader>gJ :call Fuzzball('spec/javascripts')<cr>
 map <leader>gr :call Fuzzball('')<cr>
 
 function! RubyMode()

@@ -1,5 +1,7 @@
 
-colorscheme desert256
+" colorscheme desert256
+set background=dark
+colorscheme solarized
 if has("gui_running")
   set guifont=Inconsolata-g:h12
   highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
