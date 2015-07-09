@@ -15,6 +15,10 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'altercation/vim-colors-solarized'
 
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 set ruler
 syntax on 
 set background=dark
